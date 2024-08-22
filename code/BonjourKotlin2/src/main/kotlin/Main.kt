@@ -14,6 +14,4 @@ fun main() {
         println("i = $i")
     }
 
-    NomDeFamille()
-    PrenomDuProf()
 }
