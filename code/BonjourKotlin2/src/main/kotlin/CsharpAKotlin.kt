@@ -1,7 +1,7 @@
 package org.lebrun
 
 fun main(args: Array<String>) {
-    
+
     if (args.isNotEmpty()) {
         val nom = args[0]
         afficher(nom)
