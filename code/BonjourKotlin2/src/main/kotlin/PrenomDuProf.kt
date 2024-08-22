@@ -1,6 +1,6 @@
 package org.lebrun
 
-fun PrenomDuProf(){
+fun main(){
     val name = "Pierre-Olivier"
 
     println("Salut " + name)
