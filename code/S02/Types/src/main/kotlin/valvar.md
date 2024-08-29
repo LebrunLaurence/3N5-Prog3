@@ -1,0 +1,1 @@
+val est valeur constante qui ne peut pas être changé tandis que des var peuvent être modifié dans le projet.
