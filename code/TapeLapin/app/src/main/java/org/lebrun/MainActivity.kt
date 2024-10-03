@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var listeBoutons:List<Button>
 
+    var scoreTops = 0
+    var scoreFlops = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -38,6 +41,11 @@ class MainActivity : AppCompatActivity() {
             binding.btn8,
             binding.btn9
         )
+
+        for(btn in listeBoutons){
+            btn.setOnClickListener(){ reagirAuClic(it,listeBoutons,scoreTops,scoreFlops)}
+        }
+
         initialiser(listeBoutons)
     }
 }
@@ -51,6 +59,15 @@ fun initialiser(list:List<Button>){
     boutonLapin.setText("Lapin")
 }
 
-fun reagirAuClic(){
-
+fun reagirAuClic(it: View,list:List<Button>,scoreTops:Int, scoreFlops:Int){
+     val boutonClique:Button = it as Button
+    if(boutonClique.text == "Lapin"){
+        boutonClique.setText("Taupe")
+        initialiser(list)
+        var valueTop = scoreTops + 1
+    } else {
+        var valueFlops =scoreFlops + 1
+    }
+    binding.tvTops.setText("Tops: $valueTop")
+    binding.tvFlops.setText("Flops: $ValueFlops")
 }
