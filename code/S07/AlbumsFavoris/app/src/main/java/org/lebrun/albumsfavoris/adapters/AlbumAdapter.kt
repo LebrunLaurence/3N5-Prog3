@@ -1,10 +1,12 @@
 package org.lebrun.albumsfavoris.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import org.lebrun.albumsfavoris.SecondActivity
 import org.lebrun.albumsfavoris.databinding.AlbumItemBinding
 import org.lebrun.albumsfavoris.models.Album
 
@@ -14,6 +16,13 @@ class AlbumAdapter: ListAdapter<Album, AlbumAdapter.AlbumItemViewHolder>(AlbumIt
         fun bind(album:Album){
             binding.Nom.text = album.nom
             binding.desc.text = album.desc
+
+            binding.Nom.setOnClickListener{
+                val intent:Intent = Intent(binding.root.context,SecondActivity::class.java)
+                intent.putExtra("AlbumNom",album.nom)
+                intent.putExtra("AlbumDesc",album.desc)
+                binding.root.context.startActivity(intent)
+            }
         }
     }
 
