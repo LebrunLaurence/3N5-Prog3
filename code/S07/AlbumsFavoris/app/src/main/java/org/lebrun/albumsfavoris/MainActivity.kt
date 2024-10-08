@@ -16,14 +16,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var monadapter:MonAdapter
     private lateinit var adapterAlbum:AlbumAdapter
+    val itemsAlbum:MutableList<Album> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         val view = binding.root
         setContentView(view)
         setupRecycler()
         fillRecycler()
+
     }
 
     private fun setupRecycler() {
@@ -51,8 +54,6 @@ class MainActivity : AppCompatActivity() {
         val items:MutableList<String> = mutableListOf("Antigéo","J'ai bu","Comment Debord","La Nuit Est Une Panthère","Jaune","Bla bla bla","thing","film","othet thing","ithink")
 
         monadapter.submitList(items)
-
-        val itemsAlbum:MutableList<Album> = mutableListOf()
 
         for (i in 1..100){
             itemsAlbum.add(Album("Album #$i","random desc #$i",i))

@@ -17,7 +17,7 @@ class AlbumAdapter: ListAdapter<Album, AlbumAdapter.AlbumItemViewHolder>(AlbumIt
             binding.Nom.text = album.nom
             binding.desc.text = album.desc
 
-            binding.Nom.setOnClickListener{
+            binding.albumLayout.setOnClickListener{
                 val intent:Intent = Intent(binding.root.context,SecondActivity::class.java)
                 intent.putExtra("AlbumNom",album.nom)
                 intent.putExtra("AlbumDesc",album.desc)
