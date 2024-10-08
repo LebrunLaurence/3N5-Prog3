@@ -10,10 +10,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
         android:id="@+id/tx_mon_adapter"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:spanCount="5"
+        app:spanCount="1"
         tools:listitem="@layout/mon_item"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="1"
+        tools:listitem="@layout/album_item"
+        android:id="@+id/album_adapt"/>
 
 </LinearLayout>
