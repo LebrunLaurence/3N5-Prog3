@@ -55,8 +55,17 @@ class MainActivity : AppCompatActivity() {
 
         monadapter.submitList(items)
 
-        for (i in 1..100){
-            itemsAlbum.add(Album("Album #$i","random desc #$i",i))
+        if(itemsAlbum.count() == 0){
+            for (i in 1..100){
+                itemsAlbum.add(Album("Album #$i","random desc #$i",i))
+            }
+        }
+
+
+
+        if(intent.hasExtra("ToDelete")){
+            val albumToDelete = itemsAlbum.find { it.nom == intent.getStringExtra("ToDelete") }
+            itemsAlbum.remove(albumToDelete)
         }
 
         adapterAlbum.submitList(itemsAlbum)

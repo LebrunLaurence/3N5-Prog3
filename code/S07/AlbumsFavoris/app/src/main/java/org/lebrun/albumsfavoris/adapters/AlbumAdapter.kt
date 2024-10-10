@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import org.lebrun.albumsfavoris.MainActivity
 import org.lebrun.albumsfavoris.SecondActivity
 import org.lebrun.albumsfavoris.databinding.AlbumItemBinding
 import org.lebrun.albumsfavoris.models.Album
@@ -21,6 +22,12 @@ class AlbumAdapter: ListAdapter<Album, AlbumAdapter.AlbumItemViewHolder>(AlbumIt
                 val intent:Intent = Intent(binding.root.context,SecondActivity::class.java)
                 intent.putExtra("AlbumNom",album.nom)
                 intent.putExtra("AlbumDesc",album.desc)
+                binding.root.context.startActivity(intent)
+            }
+
+            binding.supprimer.setOnClickListener{
+                val intent:Intent = Intent(binding.root.context, MainActivity::class.java)
+                intent.putExtra("ToDelete",album.nom)
                 binding.root.context.startActivity(intent)
             }
         }
