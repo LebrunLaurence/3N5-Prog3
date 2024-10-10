@@ -1,5 +1,6 @@
 package org.lebrun.albumsfavoris
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         setupRecycler()
         fillRecycler()
+
+        binding.bingo.setOnClickListener {
+            val intent:Intent = Intent(binding.root.context, BingoActivity::class.java)
+            binding.root.context.startActivity(intent)
+        }
 
     }
 
