@@ -10,6 +10,8 @@ public class ListSingleton {
 
     private List<String> randomName = new ArrayList<String>();
 
+    private List<Integer> numeros = new ArrayList<Integer>();
+
     private ListSingleton(){
 
     }
@@ -28,6 +30,10 @@ public class ListSingleton {
 
     public List<String> getRandomName(){
         return randomName;
+    }
+
+    public List<Integer> getNumeros(){
+        return numeros;
     }
 
     public void Randomize(){

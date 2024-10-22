@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AlbumsFavoris"
         tools:targetApi="31">
         <activity
+            android:name=".NumbersActivity"
+            android:exported="false" />
+        <activity
             android:name=".GameActivity"
             android:exported="false" />
         <activity

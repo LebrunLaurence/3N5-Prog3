@@ -35,6 +35,11 @@ class MainActivity : AppCompatActivity() {
             binding.root.context.startActivity(intent)
         }
 
+        binding.numbers.setOnClickListener {
+            val intent:Intent = Intent(binding.root.context, NumbersActivity::class.java)
+            binding.root.context.startActivity(intent)
+        }
+
     }
 
     private fun setupRecycler() {

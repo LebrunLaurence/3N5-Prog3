@@ -24,6 +24,12 @@
             android:layout_height="wrap_content"
             android:text="game"
             android:id="@+id/game"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="numbers"
+            android:id="@+id/numbers"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
