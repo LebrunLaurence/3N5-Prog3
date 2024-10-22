@@ -18,6 +18,12 @@
             android:layout_height="wrap_content"
             android:text="bingo"
             android:id="@+id/bingo"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="game"
+            android:id="@+id/game"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
