@@ -1,0 +1,1 @@
+La première fonction va genérer des erreurs pour chaque fichier qui ne fonctionne pas tandis que la deuxième va genérer une seule erreur pour tous les fichiers et ne va pas préciser lesquelles fonctionne.
