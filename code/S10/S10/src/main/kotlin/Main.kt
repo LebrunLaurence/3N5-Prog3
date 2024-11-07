@@ -38,7 +38,7 @@ fun lireDesFichiersForTry() {
         try {
             lireFichier("$i.txt")
         } catch (e: FileNotFoundException) {
-            println("fichier n'existe pas")
+            println("fichier $i n'existe pas")
         }
     }
 }
